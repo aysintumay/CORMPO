@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-# CORMPO
-Clinically-aware OOD-regularized Model-based Policy Optimization (CORMPO), a density-regularized offline RL algorithm.
+# CORMPO:Clinically-aware OOD-regularized Model-based Policy Optimization (CORMPO), a density-regularized offline RL algorithm.
 =======
-# Overview
+## Overview
 
 This is a re-implementation of the offline model-based RL algorithm MOPO all by pytorch **(including dynamics and mopo algo)** as described in the following paper: [MOPO: Model-based Offline Policy Optimization](https://arxiv.org/pdf/2005.13239.pdf)
 
 The performance of model-based RL algorithm greatly depends on the implementation of the ensemble dynamics model and we find that the performance of pytorch ensemble models implemented by third parties will be reduced compared with the official implementation. To this end, we reuse the official tensorflow version ensemble model. Don't worry, the implementation of the ensemble model is separate from our core code, which will not affect the simplicity of pytorch.
 
-# Dependencies
+## Dependencies
 
 - MuJoCo 2.0
 - Gym 0.22.0
@@ -16,14 +14,6 @@ The performance of model-based RL algorithm greatly depends on the implementatio
 - PyTorch 1.8+
 
 # Usage
-
-## DSRL Implementation
-outside the project directory run:
-```
-python mopo_abiomed/mopo.py --algo-name mbpo --pretrained False  --task OfflineHopperVelocity-v1  --seed 1 --reward-penalty-coef 0.0 --rollout-length 5 --epoch 100 --devid 7
-python mopo_abiomed/mopo.py --algo-name mopo --pretrained False  --task OfflineHopperVelocity-v1  --seed 1 --reward-penalty-coef 1.0 --rollout-length 5 --epoch 100 --devid 7
-```
-
 
 ## Abiomed Implementation:
 
